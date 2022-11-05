@@ -1,0 +1,293 @@
+@import '../vars';
+
+@media screen and (min-width: 580px) {
+
+	.header {
+		margin-bottom: 42px;
+	}
+	
+	.head-top {
+		padding: 5px 0 12px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		// .head-top__menu
+		&__menu {
+			flex: 0 0 30px;
+			height: 16px;
+			position: relative;
+			z-index: 20;
+
+			& > span {
+				pointer-events: none;
+				position: absolute;
+				right: 0;
+				transform-origin: right;
+				background-color: $black;
+				width: 100%;
+				height: 2px;
+				transition: transform .3s ease-in;
+			}
+
+			// .head-top__menu_span-top
+			&_span-top {
+				top: 0;
+			}
+
+			// .head-top__menu_span-center
+			&_span-center {
+				top: 50%;
+				margin-top: -1px;
+			}
+
+			// .head-top__menu_span-bttm
+			&_span-bttm {
+				bottom: 0;
+			}
+
+			&_active {
+				// .head-top__menu_span-top
+				.head-top__menu_span-top {
+					transform: rotateZ(-28deg);
+				}
+
+				// .head-top__menu_span-center
+				.head-top__menu_span-center {
+					transform: scale(0);
+				}
+
+				// .head-top__menu_span-bttm
+				.head-top__menu_span-bttm {
+					transform: rotateZ(28deg);
+				}
+			}
+		}
+	}
+	
+	.logo-img {
+		order: -1;
+		flex: 0 0 18%;
+	}
+	
+	.search {
+		order: -1;
+		flex: 0 0 50%;
+		padding: 0;
+	}
+	
+	.info-header {
+		flex: 0 0 40%;
+	}
+	
+	.header-lang {
+		order: 0;
+		// .header-lang__item
+		&__item {
+			font-size: 20px;
+		}
+	}
+	
+	.head-bttm {
+		padding: 55px 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	.head-top {
+
+		// .head-top__menu
+		&__menu {
+			display: none;
+		}
+	}
+	
+	.logo-img {
+		flex: 0 0 145px / $mxWidth * 100%;
+	}
+	
+	.search {
+		flex: 0 0 484px / $mxWidth * 100%;
+		&__lbl {
+	
+			&::after {
+				right: 10px;
+				font-size: 16px;
+			}
+		}
+	
+		// .search__inp
+		&__inp {
+			padding: 7px 15px;
+			font-size: 18px;
+		}
+	}
+	
+	.info-header {
+		flex: 0 0 auto;
+		& > i {
+			font-size: 18px;
+		}
+
+		// .info-header__item
+		&__item {
+			font-size: 14px;
+		}
+	}
+	
+	.header-lang {
+		// .header-lang__item
+		&__item {
+			font-size: 23px;
+		}
+	}
+	
+	.head-bttm {
+		position: static;
+		top: auto;
+		right: auto;
+		width: auto;
+		height: auto;
+		padding: 16px 0;
+	
+		// .head-bttm__inner-wrap
+		&__inner-wrap {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		// .head-bttm__list
+		&__list {
+			width: auto;
+			margin: 0;
+			flex: 0 0 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		// .head-bttm__item
+		&__item {
+			font-size: 16px;
+		}
+
+		// .head-bttm__link
+		&__link {
+			display: block;
+			width: 100%;
+		}
+
+		// .head-bttm__btn
+		&__btn {
+			font-size: 16px;
+			margin: 1em auto 0;
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	
+	.search {
+		// .search__inp
+		&__inp {
+			padding: 10px 30px;
+			font-size: 20px;
+		}
+
+		&__lbl {
+	
+			&::after {
+				right: 20px;
+				font-size: 19.75px;
+			}
+		}
+	}
+	
+	.info-header {
+		& > i {
+			font-size: 20px;
+		}
+
+		// .info-header__item
+		&__item {
+			font-size: 16px;
+		}
+	}
+	
+	.header-lang {
+		// .header-lang__item
+		&__item {
+			font-size: 25px;
+		}
+	}
+
+	.head-bttm {
+	
+		// .head-bttm__inner-wrap
+		&__inner-wrap {
+			justify-content: space-between;
+			flex-wrap: nowrap;
+		}
+
+		// .head-bttm__list
+		&__list {
+			flex: 1 0 auto;
+			justify-content: space-between;
+		}
+
+		// .head-bttm__btn
+		&__btn {
+			margin: 0 0 0 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 1330px) {
+	
+	.head-top {
+		flex-wrap: nowrap;
+	
+		// .head-top__menu
+		&__menu {
+			display: none;
+		}
+	}
+	
+	.logo-img {
+		flex: 0 0 145px / $mxWidth * 100%;
+	}
+	
+	.search {
+		padding: 0;
+		flex: 0 0 484px / $mxWidth * 100%;
+	
+		// .search__inp
+		&__inp {
+			padding: 10px 33px;
+			font-size: 22px;
+		}
+	}
+	
+	.head-bttm {
+	
+		// .head-bttm__list
+		&__list {
+			flex: 0 0 1010px / $mxWidth * 100%;
+		}
+	
+		// .head-bttm__item
+		&__item {
+			font-size: 20px;
+		}
+	
+		// .head-bttm__btn
+		&__btn {
+			margin: 0;
+			font-size: 20px;
+		}
+	}
+	
+}
